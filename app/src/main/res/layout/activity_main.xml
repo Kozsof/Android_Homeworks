@@ -40,7 +40,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="5dp"
         android:hint="Введите а"
-        android:inputType="number" />
+        android:inputType="numberSigned" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -56,7 +56,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="5dp"
         android:hint="Введите b"
-        android:inputType="number" />
+        android:inputType="numberSigned" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -72,7 +72,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="5dp"
         android:hint="Введите c"
-        android:inputType="number" />
+        android:inputType="numberSigned" />
 
     <TextView
         android:layout_width="wrap_content"
