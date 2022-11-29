@@ -5,6 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/img"
     tools:context=".MainActivity">
 
     <Button
@@ -12,7 +13,9 @@
         android:layout_width="300dp"
         android:layout_height="200dp"
         android:layout_centerHorizontal="true"
-        android:layout_alignParentBottom="true"
+        android:layout_centerVertical="true"
+        android:background="@drawable/button_start_style"
+        android:textColor="@color/white"
         android:text="Зарегистрироваться"
         android:textSize="20sp"/>
 

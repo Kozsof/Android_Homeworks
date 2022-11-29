@@ -5,6 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/img"
     tools:context=".FormActivity">
 
     <TextView
@@ -13,7 +14,7 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="20dp"
         android:text="Регистрация"
-        android:textColor="@color/black"
+        android:textColor="#350981"
         android:textSize="40sp" />
     <EditText
         android:id="@+id/mail"
@@ -40,6 +41,9 @@
         android:layout_height="80dp"
         android:layout_centerHorizontal="true"
         android:text="Зарегистрироваться"
+        android:background="@drawable/button_start_style"
+        android:textColor="@color/white"
+        android:textSize="15sp"
         android:layout_alignParentBottom="true"
         android:layout_marginBottom="100dp"/>
 

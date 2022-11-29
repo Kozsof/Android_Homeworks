@@ -5,6 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/img"
     tools:context=".ResultActivity">
 
     <TextView
@@ -13,27 +14,31 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="20dp"
         android:text="Отлично!)"
-        android:textColor="@color/black"
+        android:textColor="#350981"
         android:textSize="40sp" />
+
     <TextView
         android:id="@+id/hello_text"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="200dp"
-        android:layout_marginBottom="70dp"
         android:layout_centerHorizontal="true"
-        android:textSize="20sp"
-        android:textColor="@color/purple_200"
-        android:hint="Привет, друг)"/>
+        android:layout_marginTop="200dp"
+        android:layout_marginLeft="70dp"
+        android:hint="Привет, друг)"
+        android:textColor="@color/purple_700"
+        android:textSize="20sp" />
+
     <Button
         android:id="@+id/photo_button"
         android:layout_width="200dp"
         android:layout_height="100dp"
-        android:layout_centerHorizontal="true"
-        android:text="Вставить фото!)"
         android:layout_alignParentBottom="true"
-        android:layout_marginBottom="100dp"/>
-
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="100dp"
+        android:background="@drawable/button_start_style"
+        android:text="Добавить фото!)"
+        android:textColor="@color/white"
+        android:textSize="20sp" />
 
 
 </RelativeLayout>

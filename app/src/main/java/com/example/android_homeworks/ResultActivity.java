@@ -25,9 +25,9 @@ public class ResultActivity extends AppCompatActivity implements View.OnClickLis
     }
     @Override
     public void onClick(View view){
-        // Intent intent = new Intent(Intent.ACTION_OPEN_DOCUMENT);
-       // intent.setType("png");
-       /// startActivity(intent);
+        //Intent intent = new Intent(Intent.ACTION_OPEN_DOCUMENT);
+        //intent.setType("image/png");
+        //startActivity(intent);
         Toast.makeText(this, "Упс, функция в разработке", Toast.LENGTH_SHORT).show();
         Log.d("PHOTO", "Photo is ready");
     }
