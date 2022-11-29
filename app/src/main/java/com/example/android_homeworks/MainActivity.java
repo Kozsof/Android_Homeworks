@@ -2,7 +2,10 @@ package com.example.android_homeworks;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
+
+import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
@@ -11,73 +14,24 @@ import android.widget.Toast;
 import com.example.android_homeworks.databinding.ActivityMainBinding;
 
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
-    private ActivityMainBinding binding;
-    private final Problem problem = new Problem();
+    ActivityMainBinding binding;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         binding = ActivityMainBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
-        generateProblem();
-        MyClickListener listener = new MyClickListener();
-
-        binding.buttonNext.setOnClickListener(listener);
-        binding.solution1.setOnClickListener(listener);
-        binding.solution2.setOnClickListener(listener);
-        binding.solution3.setOnClickListener(listener);
-
+        binding.button.setOnClickListener(this);
     }
 
-    private void generateProblem() {
-        binding.problem.setText(String.valueOf(problem.getProblem()));
-        binding.solution1.setBackground(getDrawable(R.drawable.solution_style));
-        binding.solution2.setBackground(getDrawable(R.drawable.solution_style));
-        binding.solution3.setBackground(getDrawable(R.drawable.solution_style));
-        int position = problem.getRandom(1, 3);
-        switch (position) {
-            case 1:
-                binding.solution1.setText(String.valueOf(problem.getResult()));
-                binding.solution2.setText(String.valueOf(problem.getNoiseResult()));
-                binding.solution3.setText(String.valueOf(problem.getNoiseResult()));
-                break;
-            case 2:
-                binding.solution2.setText(String.valueOf(problem.getResult()));
-                binding.solution1.setText(String.valueOf(problem.getNoiseResult()));
-                binding.solution3.setText(String.valueOf(problem.getNoiseResult()));
-                break;
-            case 3:
-                binding.solution3.setText(String.valueOf(problem.getResult()));
-                binding.solution2.setText(String.valueOf(problem.getNoiseResult()));
-                binding.solution1.setText(String.valueOf(problem.getNoiseResult()));
-                break;
-        }
-    }
+    @Override
+    public void onClick(View view){
+        Intent intent = new Intent(MainActivity.this, FormActivity.class);
+        startActivity(intent);
+        finish();
+        Log.d("FIRST START", "the formActivity was started");
 
-    class MyClickListener implements View.OnClickListener{
-
-
-        @Override
-        public void onClick(View view) {
-            switch (view.getId()){
-                case R.id.button_next:
-                    generateProblem();
-                    break;
-                case R.id.solution1:
-                case R.id.solution2:
-                case R.id.solution3:
-                    String text = ((TextView)view).getText().toString();
-                    if (text.equals(String.valueOf(problem.getResult()))){
-                        view.setBackgroundColor(getColor(R.color.сorrect));
-                        Toast.makeText(MainActivity.this, "Правильно!", Toast.LENGTH_SHORT).show();
-                    }
-                    else {
-                        view.setBackgroundColor(getColor(R.color.wrong));
-                        Toast.makeText(MainActivity.this, "Не правильно :(", Toast.LENGTH_SHORT).show();
-                    }
-            }
-        }
     }
 }

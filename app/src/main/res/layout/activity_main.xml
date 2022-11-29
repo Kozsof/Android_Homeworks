@@ -5,89 +5,16 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/teal_700"
-    android:padding="30dp"
     tools:context=".MainActivity">
 
-
-    <TextView
-        android:id="@+id/title"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:text="@string/app_name"
-        android:textColor="#00F3DB"
-        android:textSize="40sp" />
-
-    <TextView
-        android:id="@+id/problem"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/title"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="20dp"
-        android:textColor="@color/black"
-        android:textSize="50sp"
-        tools:text="19 + 57 = ?" />
-
-    <LinearLayout
-        android:id="@+id/solutions"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/problem"
-        android:layout_marginTop="30dp"
-        android:orientation="vertical">
-
-        <TextView
-            android:id="@+id/solution1"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_gravity="center"
-            android:layout_margin="5dp"
-            android:layout_weight="1"
-            android:background="@drawable/solution_style"
-            android:gravity="center"
-            android:textColor="@color/text_color"
-            android:textSize="40sp"
-            tools:text="76" />
-
-        <TextView
-            android:id="@+id/solution2"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_gravity="center"
-            android:layout_margin="5dp"
-            android:layout_weight="1"
-            android:background="@drawable/solution_style"
-            android:gravity="center"
-            android:textColor="@color/text_color"
-            android:textSize="40sp"
-            tools:text="76" />
-
-        <TextView
-            android:id="@+id/solution3"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_gravity="center"
-            android:layout_margin="5dp"
-            android:layout_weight="1"
-            android:background="@drawable/solution_style"
-            android:gravity="center"
-            android:textColor="@color/text_color"
-            android:textSize="40sp"
-            tools:text="76" />
-    </LinearLayout>
-
     <Button
-        android:id="@+id/button_next"
-        android:layout_width="200dp"
-        android:layout_height="80dp"
-        android:layout_alignParentBottom="true"
+        android:id="@+id/button"
+        android:layout_width="300dp"
+        android:layout_height="200dp"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="30dp"
-        android:background="@drawable/button_style"
-        android:text="Дальше"
-        android:textColor="@color/white"
-        android:textSize="20sp"
-        />
+        android:layout_alignParentBottom="true"
+        android:text="Зарегистрироваться"
+        android:textSize="20sp"/>
+
+
 </RelativeLayout>
