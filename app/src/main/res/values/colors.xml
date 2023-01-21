@@ -8,8 +8,8 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
     <color name="text_color">#000000</color>
-    <color name="teal_bg">#FF00F3DB</color>
-    <color name="button_color">#033E38</color>
+    <color name="bg">#FF00F3DB</color>
+    <color name="item_mini_card">#033E38</color>
     <color name="wrong">#730505</color>
     <color name="сorrect">#53CD75</color>
 </resources>
