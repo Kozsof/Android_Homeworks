@@ -4,6 +4,8 @@ import android.content.Context;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.Canvas;
+import android.graphics.Color;
+import android.graphics.Paint;
 import android.graphics.Rect;
 import android.util.Log;
 import android.view.MotionEvent;
@@ -19,6 +21,7 @@ import com.example.android_homeworks.model.Pipe;
 public class GameView extends SurfaceView implements SurfaceHolder.Callback {
     private static final int FPS = 300;
     private SurfaceHolder surfaceHolder;
+    private final Paint paint = new Paint();
     private DrawTread drawTread;
     private final Bitmap background;
     private Bird bird;
@@ -61,7 +64,9 @@ public class GameView extends SurfaceView implements SurfaceHolder.Callback {
         canvas.drawBitmap(bird.getSprite(), bird.x, bird.y, null);
         canvas.drawBitmap(pipe.getTopPipe(), pipe.x, 0, null);
         canvas.drawBitmap(pipe.getBottomPipe(), pipe.x, getHeight() - pipe.getBottomPipe().getHeight(), null);
-
+        paint.setColor(Color.BLACK);
+        paint.setTextSize(100);
+        canvas.drawText(pipe.getScore() + "", canvas.getWidth() - 200 , 200, paint);
     }
 
     private void update() {

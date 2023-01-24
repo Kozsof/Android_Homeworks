@@ -9,6 +9,7 @@ import com.example.android_homeworks.R;
 public class Pipe extends GameObject {
     private Bitmap topPipe;
     private Bitmap bottomPipe;
+    private int score = 0;
 
     private static final float X_SPEED = 10;
     private static final float SPACER_SIZE = 200;
@@ -17,6 +18,10 @@ public class Pipe extends GameObject {
     private final float height;
     private final float width;
 
+
+    public int getScore() {
+        return score;
+    }
 
     public Pipe(Context context, float height, float width) {
         super(width, 0);
@@ -48,16 +53,17 @@ public class Pipe extends GameObject {
         x -= X_SPEED;
         if(x <= -bottomPipe.getWidth()){
             x = width;
+            score += 1;
             generatePipes();
         }
     }
 
     public boolean isCollishion(GameObject object){
-        if (x - 80 < object.x && x + bottomPipe.getWidth() > object.x) {
-            if (object.y - 5 < topPipe.getHeight()) {
+        if (x - 85 < object.x && x + bottomPipe.getWidth() > object.x) {
+            if (object.y - 10 < topPipe.getHeight()) {
                 return true;
             }
-            return object.y  > height - bottomPipe.getHeight();
+            return object.y + 5  > height - bottomPipe.getHeight();
         }
            return false;
     }
